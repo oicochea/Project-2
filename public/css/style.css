@@ -1,0 +1,114 @@
+header{
+    text-align: center;
+    color: cadetblue;
+    margin-bottom: 10%;
+}
+
+header h1 span{
+    color: crimson;
+}
+.indexMid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+main{
+    text-align: center;
+}
+
+.createButton a{
+    color: wheat;
+}
+.loginButton a{
+    color: wheat;
+}
+
+.newItemButton{
+    color:  wheat;
+}
+
+.loginButton{
+    margin-top: 10%;
+    margin-bottom: 30% ;
+    margin-right: 10%;
+    border: 5px solid black;
+    background-color: cornflowerblue;
+    color: wheat;
+    padding: 4px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.loginButton:hover{
+    background-color: gray;
+}
+
+.logoutButton{
+    font-size: 30px;
+    height: fit-content;
+    width: fit-content;
+        margin-top: 10%;
+        margin-bottom: 30% ;
+        margin-left: 46%;
+        border: 5px solid black;
+        background-color: cornflowerblue;
+        color: wheat;
+        padding: 4px;
+        border-radius: 5px;
+        text-decoration: none;
+}
+.logoutButton:hover{
+    background-color: gray;
+}
+
+.logoutButton a{
+    color: wheat;
+
+}
+
+.createButton{
+    margin-top: 10%;
+    margin-bottom: 30% ;
+    margin-left: 10%;
+    border: 5px solid black;
+    background-color: cornflowerblue;
+    color: wheat;
+    padding: 4px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.createButton:hover{
+    background-color: gray;
+}
+
+.newItemButton{
+    font-size: 30px;
+    height: fit-content;
+    width: fit-content;
+        margin-top: 10%;
+        margin-bottom: 30% ;
+        margin-left: 46%;
+        border: 5px solid black;
+        background-color: cornflowerblue;
+        color: wheat;
+        padding: 4px;
+        border-radius: 5px;
+        text-decoration: none;
+}
+
+.newItemButton:hover{
+    background-color: gray;
+}
+
+
+.signUpForm{
+    text-align: center;
+    width: 300px;
+    
+}
+
+footer{
+    margin-top: 10%;
+    text-align: center;
+}

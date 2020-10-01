@@ -3,15 +3,12 @@ const Layout = require("../layout.jsx");
 
 class Index extends React.Component {
   render() {
-    const {items , username} = this.props
+    const {item , username} = this.props
     return (
       <Layout title="Shopping List"> 
-        <h1> {username}'s List</h1>
         <h1 className="newItemButton"> <a href="/shoppingItems/new">Add New Item</a> </h1>
-        {items.map((item, index) =>{
-          return(
             <div Class="itemsToBuy">
-             <h4><a href = {`shoppingItems/show/${item.id}`}>{item.itemName}</a></h4>
+              <h4>{item.itemName}</h4>
               <img src={`${item.img}`} alt="product" width="200" height="240"></img><br></br>
               <h4>Priority:{item.priority}</h4>
               <h4>{item.size}</h4>
@@ -25,9 +22,6 @@ class Index extends React.Component {
                 <input type ="submit" value="Purchased"/>
               </form>
               </div>
-        )
-      }
-       )}
        <h1 className="logoutButton"> <a href="/auth/logout">Log Out</a> </h1>
 
       </Layout>

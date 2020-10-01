@@ -86,15 +86,13 @@ main{
     font-size: 30px;
     height: fit-content;
     width: fit-content;
-        margin-top: 10%;
-        margin-bottom: 30% ;
-        margin-left: 46%;
-        border: 5px solid black;
-        background-color: cornflowerblue;
-        color: wheat;
-        padding: 4px;
-        border-radius: 5px;
-        text-decoration: none;
+    margin-left: 46%;
+    border: 5px solid black;
+    background-color: cornflowerblue;
+    color: wheat;
+    padding: 4px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .newItemButton:hover{

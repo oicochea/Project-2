@@ -12,7 +12,6 @@ class Index extends React.Component {
           return(
             <div Class="itemsToBuy">
               <h4>{item.itemName}</h4>
-              <h4>Added: {item.dateAdded}</h4>
               <img src={`${item.img}`} alt="product" width="200" height="240"></img><br></br>
               <h4>Priority:{item.priority}</h4>
               <h4>{item.size}</h4>

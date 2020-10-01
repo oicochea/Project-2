@@ -8,15 +8,14 @@ const { Schema, model } = require("mongoose");
 ////////////////////////////////////
 
 const shoppingItemSchema = new Schema({
-  // username: { type: String, required: true },
+  username: { type: String, required: true },
   itemName: { type: String, required: true },
   size: { type: String },
   qty: { type: String, required: true },
   priority: { type: Number },
   buylink:{ type: String },
   store:{ type: String },
-  img:{ type: String },
-  dateAdded:{type: Date, default: Date.now}
+  img:{ type: String }
 })
 ;
 

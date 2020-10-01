@@ -17,8 +17,8 @@ const router = Router();
 
 router.get('/' , auth , async (req,res )=>{
   try{
-      req.body.username = req.body.session
       const items =  await shoppingItem.find({username: req.session.username})
+      console.log( await items)
       res.render("shoppingItems/index.jsx", {items: items , username: req.session.username})
        }catch(err){
         console.log(err)
@@ -33,9 +33,9 @@ router.get ('/new' , auth , async (req,res)=>{
 
 
 router.post('/', auth , async (req,res)=>{
-  req.body.username = req.body.session
+  req.body.username = req.session.username
   const newItem = await shoppingItem.create(req.body)
-  res.redirect("shoppingItems/index.jsx")
+  res.redirect("/shoppingItems/")
 })
 
 

@@ -19,9 +19,8 @@ const router = Router();
 router.get('/' , auth , async (req,res )=>{
   try{
       const items =  await shoppingItem.find({username: req.session.username})
-      const household = await User.find({household: req.session.household })
       console.log( await items)
-      res.render("shoppingItems/index.jsx", {items: items , household:household , username: req.session.username})
+      res.render("shoppingItems/index.jsx", {items: items , household:req.session.household , username: req.session.username})
        }catch(err){
         console.log(err)
       }
@@ -38,6 +37,8 @@ router.get ('/new' , auth , async (req,res)=>{
     console.log(error)
   }
 });
+
+
 
 //create
 router.post('/', auth , async (req,res)=>{
@@ -67,9 +68,23 @@ router.delete("/:id", auth, async (req,res)=>{
 
 router.get("/edit/:id" , auth, async (req, res) => {
   try{
-    req.body.usernmae = req.session.username
+    req.body.username = req.session.username
     const item = await shoppingItem.findById(req.params.id)
     res.render("shoppingItems/edit.jsx",{item : item,  username: req.session.username})
+  }
+  catch(error){
+    console.log(error)
+  }
+
+});
+
+
+router.get("/household/:householdname" , auth, async (req, res) => {
+  try{
+    req.body.username = req.session.username
+    list = req.params.householdname
+    const item = await shoppingItem.find({household: req.params.householdname})
+    res.render("shoppingItems/householdIndex.jsx",{item: item , list})
   }
   catch(error){
     console.log(error)

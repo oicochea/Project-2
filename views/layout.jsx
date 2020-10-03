@@ -13,7 +13,7 @@ class Layout extends React.Component {
         <body>
           <header>
             <h1>Welcome To <span>Self-List!</span></h1>
-            <h3>Create your shopping List! </h3>
+            <h3>Create your shopping List or one for your Household! </h3>
           </header>
           <nav className="navBar">
           <a href="/shoppingItems/new">Add Item</a>
@@ -22,7 +22,7 @@ class Layout extends React.Component {
           </nav>
           <main>{this.props.children}</main>
           <footer>
-            <h1>You Can Share your Shopping List With anyone!</h1>
+            <h1>You Can Have Multiple Contributors!</h1>
           </footer>
         </body>
       </html>

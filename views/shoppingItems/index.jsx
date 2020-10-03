@@ -4,6 +4,7 @@ const Layout = require("../layout.jsx");
 class Index extends React.Component {
   render() {
     const {items , username , household} = this.props
+    console.log(household)
     return (
       <Layout title="Shopping List"> 
         <h1> {username}'s List</h1>
@@ -19,6 +20,7 @@ class Index extends React.Component {
               <h5>Size:{item.size}</h5>
               <h5>Quantity:{item.qty}</h5>
               <h5>Date Added:{item.dateAdded}</h5>
+              <h5>List:{item.household}</h5>
               <h5><a href={item.buylink} target="_blank">Online link</a></h5>
               <form action={`/shoppingItems/edit/${item.id}`}        method="GET">
               <input className="itemButtons" type ="submit" value="edit"/>

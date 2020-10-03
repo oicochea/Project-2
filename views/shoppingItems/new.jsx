@@ -21,6 +21,8 @@ class Index extends React.Component {
       <input type="string" name="store"/>
       <label>Online Buy Link</label>
       <input type="string" name="buylink"/>
+      <label>Household, Optional:</label>
+      <input type="string" name="household"/>
       <label>Priority</label>
       <select type= "number" id="priority" name="priority">
             <option value="1">1</option>

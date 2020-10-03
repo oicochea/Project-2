@@ -4,6 +4,7 @@
 const { Router } = require("express");
 const auth = require("../authmiddleware");
 const shoppingItem = require("../../models/shoppingItem/index")
+const User = require("../../models/auth/index")
 ///////////////////////////////////////
 // CREATE ROUTER
 ///////////////////////////////////////
@@ -18,8 +19,9 @@ const router = Router();
 router.get('/' , auth , async (req,res )=>{
   try{
       const items =  await shoppingItem.find({username: req.session.username})
+      const household = await User.find({household: req.session.household })
       console.log( await items)
-      res.render("shoppingItems/index.jsx", {items: items , username: req.session.username})
+      res.render("shoppingItems/index.jsx", {items: items , household:household , username: req.session.username})
        }catch(err){
         console.log(err)
       }

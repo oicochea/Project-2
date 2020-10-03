@@ -11,6 +11,8 @@ class Login extends React.Component {
           <input type="text" name="username"/>
           <label>Password</label>
           <input type="password" name="password"/>
+          <label>Household</label>
+          <input type="text" name="household" value="If Created"/>
           <input type="submit" value="login"/>
         </form>
         </div>

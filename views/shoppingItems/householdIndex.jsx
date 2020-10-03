@@ -3,12 +3,11 @@ const Layout = require("../layout.jsx");
 
 class Index extends React.Component {
   render() {
-    const {items , username , household} = this.props
+    const {items , username } = this.props
     return (
       <Layout title="Shopping List"> 
         <h1> {username}'s List</h1>
         <h1 className="newItemButton"> <a href="/shoppingItems/new">Add New Item</a> </h1>
-        <h1 className="newItemButton"> <a href={`/shoppingItems/household/${household}`}>Household List</a> </h1>
         <div className="itemsContainer">
         {items.map((item, index) =>{
           return(

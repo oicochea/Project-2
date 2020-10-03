@@ -46,6 +46,7 @@ router.post("/login", async (req, res) => {
       //SAVE INFO IN SESSION THAT USER IS LOGGEDIN AND USERNAME
       req.session.login = true;
       req.session.username = user[0].username;
+      req.session.household = user[0].household;
       res.redirect("/shoppingItems/");
     } else {
       // Redirect to login page if failed

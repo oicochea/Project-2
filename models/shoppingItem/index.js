@@ -9,6 +9,7 @@ const { Schema, model } = require("mongoose");
 
 const shoppingItemSchema = new Schema({
   username: { type: String, required: true },
+  household:{ type: String},
   itemName: { type: String, required: true },
   size: { type: String },
   qty: { type: String, required: true },

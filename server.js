@@ -44,7 +44,7 @@ app.use(
     secret: SECRET,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: process.env.NODE_ENV === "production" },
+    // cookie: { secure: process.env.NODE_ENV === "production" },
   })
 );
 app.use(express.static("public"));

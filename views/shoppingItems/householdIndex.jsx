@@ -6,7 +6,7 @@ class Index extends React.Component {
     const {item , list } = this.props
     return (
       <Layout title="Shopping List"> 
-        <h1> {list}Shared's List</h1>
+        <h1> {list} Shared's List</h1>
         <h1 className="newItemButton"> <a href="/shoppingItems/new">Add New Item</a> </h1>
         <div className="itemsContainer">
         {item.map((item, index) =>{

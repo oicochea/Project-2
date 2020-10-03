@@ -29,7 +29,8 @@ router.get('/' , auth , async (req,res )=>{
 
 router.get ('/new' , auth , async (req,res)=>{
   try{
-    res.render("shoppingItems/new.jsx")
+    req.body.username = req.session.username
+    res.render("shoppingItems/new.jsx" ,{ username: req.session.username})
   }
   catch(error){
     console.log(error)

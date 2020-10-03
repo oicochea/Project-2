@@ -8,8 +8,10 @@ class Index extends React.Component {
         <h2>Create an account and start creating your list</h2>
         <div className="signUpForm">
         <form action="/auth/signup" method="POST">
+          <label>Username</label>
           <input type="text" name="username" placeholder="username" />
-          <input type="text" name="password" placeholder="password" />
+          <label>Password</label>
+          <input type="password" name="password" placeholder="password" />
           <input type="submit" value="signup" />
         </form>
         </div>

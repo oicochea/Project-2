@@ -15,7 +15,8 @@ const shoppingItemSchema = new Schema({
   priority: { type: Number },
   buylink:{ type: String },
   store:{ type: String },
-  img:{ type: String }
+  img:{ type: String },
+  dateAdded: { type: String},
 })
 ;
 

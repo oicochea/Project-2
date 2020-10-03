@@ -1,28 +1,25 @@
-# Mongo - Express - Express React Views Template
+# Project 2 - Self-List
 
-## USING THIS TEMPLATE:
+A shopping item creating that allows you to keep track of what you need to buy, edit, delete, and update.
 
-- Make sure to run npm install
+## Technolgies used
+Node.js, Mongoose, Express and JSX
 
-- Environment Files are in a .env, create with your env variables. Here are some needed variables for this template to get you started. You can rename template.env into .env to get started.
+Used MVC File Structure
 
-```
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/
-DB_NAME=myDatabase
-SECRET=cheese
-```
+We have 1 model with 7 RESTful routes and Full CRUD
 
-## Commands
+## Difficulties
+- Tried adding a household input in the user schema and the shopping item schema. This would allow the user to create items for their own list and a household list.
+ Each user after would have to create an account with the same house hold item. Would then use the mondo find syntax to pull req.session.household and pull the data.
 
-`npm run dev` run dev server
+- Problem was tyring to pass the household name and then pulling it as we did for the username. I don't think I am far away from the issue, but it should take the app to the desired level of functionality.
 
-`npm run start` run in production more
+## Improvements
+ Creating the household Authorization user with Admin responsabilities to delete and edit, to allow for edit hiarchy,
 
-- For production you should add a store property to sessions that'll store the session in redis or mongo. See the express-session documentation to learn more.
+ exporting the data string to email or text to send to the purchasing party - looked into it and started messing with it, Curveball was the php code since mongo db can only export with as JSON or CSV file.
+ Figured PHP language can be thrown in with HTML and should be a couple of more days of research.
 
-- session auth built in, the user model is in **models/auth** and the auth routes are in **controllers/auth**
+ 
 
-- If you want the connect.session() warning to go away you can configure a mongo session store using the following library => https://www.npmjs.com/package/connect-mongo
-
-MAKE SURE TO JOIN THE SLACK AND DISCORD COMMUNITIES AT DEVNURSERY.COM

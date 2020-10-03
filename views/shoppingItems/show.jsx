@@ -3,17 +3,14 @@ const Layout = require("../layout.jsx");
 
 class Index extends React.Component {
   render() {
-    const {items , username } = this.props
+    const {item , username} = this.props
     return (
       <Layout title="Shopping List"> 
-        <h1> {username}'s List</h1>
         <h1 className="newItemButton"> <a href="/shoppingItems/new">Add New Item</a> </h1>
-        <div className="itemsContainer">
-        {items.map((item, index) =>{
-          return(
-            <div Class="itemsToBuy">
+        <div className="showBox">
+        <div Class="showItemsToBuy">
              <h4><a href = {`/shoppingItems/show/${item.id}`}>Item: {item.itemName}</a></h4>
-              <img src={`${item.img}`} alt="product" width="100"></img><br></br>
+              <img src={`${item.img}`} alt="product" width="300"></img><br></br>
               <h5>Priority:{item.priority}</h5>
               <h5>Size:{item.size}</h5>
               <h5>Quantity:{item.qty}</h5>
@@ -23,14 +20,11 @@ class Index extends React.Component {
               <input className="itemButtons" type ="submit" value="edit"/>
               </form>
               <form action={`/shoppingItems/${item.id}?_method=DELETE`}        method="POST">
-                <input className="itemButtons" type ="submit" value="Delete"/>
+                <input className="itemButtons" type ="submit" value="Delete"/><br></br>
                 <input className="itemButtons" type ="submit" value="Purchased"/>
               </form>
               </div>
-        )
-      }
-       )}
-       </div>
+              </div>
        <h1 className="logoutButton"> <a href="/auth/logout">Log Out</a> </h1>
 
       </Layout>

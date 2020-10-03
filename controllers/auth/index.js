@@ -26,7 +26,7 @@ router.post("/signup", async (req, res) => {
   // SAVE NEW USER IN DB
   const newUser = await User.create(req.body);
   // Redirect to login page
-  res.redirect("auth/login");
+  res.redirect("/auth/login");
 });
 
 // LOGIN PAGE

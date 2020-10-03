@@ -13,8 +13,13 @@ class Layout extends React.Component {
         <body>
           <header>
             <h1>Welcome To <span>Self-List!</span></h1>
-            <h3>Create your shopping List  and share it with your Housemates! </h3>
+            <h3>Create your shopping List! </h3>
           </header>
+          <nav className="navBar">
+          <a href="/shoppingItems/new">Add Item</a>
+          <a href="/shoppingItems/">See My List</a>
+          <a href="/auth/logout">Logout</a>
+          </nav>
           <main>{this.props.children}</main>
           <footer>
             <h1>You Can Share your Shopping List With anyone!</h1>

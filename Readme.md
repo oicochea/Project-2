@@ -1,5 +1,7 @@
 # Project 2 - Self-List
 
+- working link - https://oscarproject-2.herokuapp.com/
+
 - A shoppinglist App that allows you to keep track of what you need to buy, edit, delete, and update the items.
 This includes priority and images input and link to online purchase system
 
@@ -11,6 +13,7 @@ This includes priority and images input and link to online purchase system
 - 7 RESTful routes and full CRUD
 - sign up/log in with encrypted passwords and authorization
 - We have 1 model Schema and 1 user signup Schema
+- Heroku 
 
 ## Approach Taken
 

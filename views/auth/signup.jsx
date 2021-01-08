@@ -14,7 +14,7 @@ class Index extends React.Component {
           <input type="password" name="password" placeholder="password" />
           <label>Household</label>
           <input type="text" name="household" placeholder="Optional" />
-          <input type="submit" value="signup" />
+          <input type="submit" value="signup" class="button"/>
         </form>
         </div>
       </Layout>

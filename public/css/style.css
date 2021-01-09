@@ -1,3 +1,18 @@
+:root{
+    --ff-primary:'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+}
+
+.username{
+    font-family: var(--ff-primary);
+    font-size: 30px;
+}
+
+.box{
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+}
 body{
     background-color: 	#f3e8d4;
     width: 100%;
@@ -229,8 +244,7 @@ footer{
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: whitesmoke ;
-    width: 400px;
-    height: fit-content;
+    width: 100px;
     border: 2px solid black;
 }
 
@@ -257,6 +271,10 @@ footer{
     flex-wrap: wrap;
 }
 
+img{
+    width: 100px;
+    height: auto;
+}
 
 .loginField, .signupField {
     margin: 1.5%;

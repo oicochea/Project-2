@@ -5,6 +5,7 @@ class Login extends React.Component {
   render() {
     return (
       <Layout title="LOGIN">
+        <div class="box">
         <div className="loginForm">
         <form action="/auth/login" method="post">
           <label>Username</label>
@@ -13,8 +14,9 @@ class Login extends React.Component {
           <input type="password" name="password"/>
           <label>Household</label>
           <input type="text" name="household" value="If Created"/>
-          <input type="submit" value="login"/>
+          <input type="submit" value="login" class="button"/>
         </form>
+        </div>
         </div>
       </Layout>
     );

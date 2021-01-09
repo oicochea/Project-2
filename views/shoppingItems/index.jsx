@@ -7,21 +7,23 @@ class Index extends React.Component {
     console.log(household)
     return (
       <Layout title="Shopping List"> 
-        <h1> {username}'s List</h1>
+        <p className="username"> {username}'s Shopping List</p>
         <h1 className="newItemButton"> <a href="/shoppingItems/new">Add New Item</a> </h1>
         <h1 className="newItemButton"> <a href={`/shoppingItems/household/${household}`}>Household List</a> </h1>
         <div className="itemsContainer">
         {items.map((item, index) =>{
           return(
+            <div class="box">
             <div Class="itemsToBuy">
-             <h4><a href = {`/shoppingItems/show/${item.id}`}>Item: {item.itemName}</a></h4>
-              <img src={`${item.img}`} alt="product" width="100"></img><br></br>
-              <h5>Priority:{item.priority}</h5>
-              <h5>Size:{item.size}</h5>
-              <h5>Quantity:{item.qty}</h5>
-              <h5>Date Added:{item.dateAdded}</h5>
-              <h5>List:{item.household}</h5>
-              <h5><a href={item.buylink} target="_blank">Online link</a></h5>
+            <img src={`${item.img}`} alt="product"></img><br></br>
+             <p><a href = {`/shoppingItems/show/${item.id}`}>Item: {item.itemName}</a></p>
+              
+              <p>Priority:{item.priority}</p>
+              <p>Size:{item.size}</p>
+              <p>Quantity:{item.qty}</p>
+              <p>Date Added:{item.dateAdded}</p>
+              <p>List:{item.household}</p>
+              <p><a href={item.buylink} target="_blank">Online link</a></p>
               <form action={`/shoppingItems/edit/${item.id}`}        method="GET">
               <input className="itemButtons" type ="submit" value="edit"/>
               </form>
@@ -29,6 +31,7 @@ class Index extends React.Component {
                 <input className="itemButtons" type ="submit" value="Delete"/>
                 <input className="itemButtons" type ="submit" value="Purchased"/>
               </form>
+              </div>
               </div>
         )
       }

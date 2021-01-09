@@ -33,7 +33,7 @@ class Index extends React.Component {
               </select> 
               <label>Date</label>
       <input type="date" name="dateAdded" defaultValue = {Date.now}/>
-        <input type= "submit" value="Add Item"/>
+        <input type= "submit" value="Add Item" class="button"/>
         
         </form>
         </div>
